@@ -1,0 +1,27 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+.carousel {
+    .carousel-inner {
+        width: 100%;
+        overflow: visible;
+
+        @include breakpoint(tablet) {
+            margin: 0 auto;
+        }
+    }
+
+    .carousel-indicators {
+        li {
+            background-color: $color-grey1;
+
+            &.active {
+                background-color: $color-primary;
+            }
+        }
+    }
+}

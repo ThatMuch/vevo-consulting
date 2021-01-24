@@ -1,0 +1,95 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+    outline: 0;
+}
+
+html {
+    max-width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: $text-c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html body {
+    // used as wrapper for sticky footer
+    font-family: $text-ff;
+    font-size: $text-fz; // only used for rem-handling, the actual font-size is $body__fontsize
+    line-height: $text-lh;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $html__bgcolor !important;
+    color: $text-c;
+}
+
+main {
+    position: relative;
+    margin-top: $size-navbar;
+
+    article,
+    .element {
+        padding: 1rem 0;
+    }
+}
+
+aside {
+    position: relative;
+    margin-top: $size-navbar;
+
+    .widget {
+        padding: 1rem 0;
+        border-bottom: 1px solid $color-grey;
+
+        .nav-link {
+            padding: 0 0 0.5rem 0;
+        }
+    }
+}
+
+article,
+.element,
+nav,
+footer .inner {
+    // width: $element_width;
+    //  max-width: $element_maxwidth;
+    margin: 0 auto;
+
+    @include breakpoint(mobile) {
+        width: $element_width_mobile;
+    }
+}
+
+.site-content {
+    width: 100%;
+}
+
+.container {
+    @include breakpoint(desktopLg) {
+        max-width: 1250px !important;
+    }
+}

@@ -1,0 +1,29 @@
+blockquote {
+    font-style: italic;
+    position: relative;
+    quotes: "“" "”" "‘" "’";
+    padding: 1.5rem;
+
+    &::before,
+    &::after {
+        position: absolute;
+        color: $color-grey1;
+        font-size: 6em;
+        font-weight: 400;
+        line-height: 0.1em;
+        z-index: 100;
+    }
+
+    &::before {
+        left: 0;
+        content: open-quote;
+        margin-right: 0.15em;
+        vertical-align: -0.15em;
+    }
+
+    &::after {
+        content: close-quote;
+        vertical-align: -0.7em;
+        right: 0;
+    }
+}

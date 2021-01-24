@@ -1,0 +1,94 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+
+/* Responsive */
+@mixin breakpoint($device) {
+    @if $device == desktopLg {
+        @media screen and (min-width: 1366px) {
+            @content;
+        }
+    }
+    @else if $device == desktop {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $device == laptop {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $device == tablet {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $device == phablet {
+        @media screen and (min-width: 451px) {
+            @content;
+        }
+    }
+    @else if $device == mobile {
+        @media screen and (max-width: 450px) {
+            @content;
+        }
+    }
+}
+
+/* HEADINGS
+/––––––––––––––––––––––––*/
+// Create a step size
+/* This is the percentage each heading will be reduced by. */
+$step-size-heading: 0.33333;
+
+/* Amplifier value */
+$amplifier-heading: 1.5;
+
+/* The mixin */
+@mixin heading-size($size) {
+    font-size: $size * $step-size-heading * $amplifier-heading + rem;
+
+    @include breakpoint(mobile) {
+        font-size: ($size - 1) * $step-size-heading * $amplifier-heading + rem;
+    }
+}
+
+@mixin ellipsis($width: 100%) {
+    max-width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+    overflow: hidden;
+    position: relative;
+    line-height: $lineHeight;
+    max-height: $lineHeight * $lineCount;
+
+    //text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
+
+    &:before {
+        content: '...';
+        position: absolute;
+        right: 1em;
+        bottom: 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        background: $bgColor;
+    }
+}

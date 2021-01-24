@@ -1,0 +1,230 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+
+.footer {
+    width: 100vw;
+    margin-top: auto;
+    color: #fff;
+    background: $color-primary;
+
+    a {
+        color: #fff;
+    }
+
+    &__upper {
+        padding: 100px 0;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .container * {
+            z-index: 3;
+        }
+
+        @include breakpoint(tablet) {
+            .row {
+                flex-direction: row-reverse;
+            }
+        }
+
+
+        &__img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .img-shadow {
+                box-shadow: -30px 0px 0 0 white;
+                margin-bottom: 50px;
+
+                @include breakpoint(tablet) {
+                    margin-bottom: 0px;
+                }
+            }
+
+            @include breakpoint(tablet) {
+                justify-content: flex-end;
+            }
+        }
+
+        &__content {
+            text-align: center;
+
+            @include breakpoint(tablet) {
+                text-align: left;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, $color-primary 7.72%, rgba(0, 101, 111, 0) 114.02%);
+            z-index: 0;
+        }
+    }
+
+    &__rs {
+        text-align: center;
+        margin-bottom: 0;
+        padding: 0;
+
+        &__item {
+            display: inline-block;
+            list-style: none;
+            margin-right: 1.5rem;
+
+            &:last-child {
+                margin-right: 0 !important;
+            }
+
+            a {
+                font-size: 1.5rem;
+            }
+
+            &:hover i {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__inner {
+        padding: 1.5rem 0;
+        font-size: 0.8rem;
+    }
+
+    &__credits {
+        background-color: $color-primary-darker;
+        color: rgba($color: #fff, $alpha: 0.5);
+        text-align: center;
+        position: relative;
+        font-size: .8rem;
+
+        &__thatmuch {
+            position: absolute;
+            top: 50%;
+            right: 35px;
+            transform: translate(0, -50%);
+            width: 120px;
+
+            img {
+                width: 100px;
+                opacity: .5;
+                transition-duration: $transition_slow;
+
+                @include breakpoint(tablet) {
+                    width: 100%;
+                }
+
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__logo img {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+
+    &__follow-us {
+        margin-bottom: 5px;
+        font-family: $text-heading;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    &__infos {
+        margin-top: 20px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        p {
+            margin-bottom: 5px !important;
+            line-height: 20px !important;
+        }
+    }
+
+    /*----------  Widgets  ----------*/
+
+    .widget-title {
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    .nav {
+        padding: 0;
+
+        .nav-link {
+            color: #fff;
+            padding: 0 0 0.75rem 0;
+        }
+    }
+
+    .widget_nav_menu > div {
+        margin-top: 20px !important;
+    }
+
+    .menu {
+        margin-left: 40px !important;
+    }
+
+    .widget.widget_nav_menu {
+        li a {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .menu {
+            margin-left: 20px !important;
+        }
+
+        .footer__rs__item {
+            margin-right: .75rem;
+        }
+
+        .widget_nav_menu {
+            text-align: center !important;
+        }
+
+        .footer__credits .footer__thatmuch {
+            position: inherit;
+            display: block;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .menu {
+            margin-left: 0px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer__credits {
+            padding-bottom: 20px;
+
+            &__thatmuch {
+                position: inherit;
+            }
+        }
+    }
+}

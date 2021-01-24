@@ -1,0 +1,50 @@
+.section-team {
+    .section__title {
+        color: white;
+        margin-bottom: 3rem !important;
+
+        &:before {
+            background: white;
+        }
+    }
+
+    &__member {
+        margin-bottom: 30px;
+        text-align: center;
+        background-color: #fff;
+        padding: 60px 30px;
+        height: 100%;
+        border-radius: $border-radius;
+        box-shadow: $shadow;
+
+        &__img {
+            height: 200px;
+            width: 200px;
+            background-color: #ccc;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+            border-radius: $border-radius;
+        }
+
+        &__desc {
+            text-align: justify;
+        }
+
+        &__job {
+            margin-bottom: 1.5rem;
+        }
+
+        &__rs {
+            li {
+                list-style: none;
+                display: inline-block;
+                font-size: 25px;
+
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

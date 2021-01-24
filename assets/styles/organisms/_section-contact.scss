@@ -1,0 +1,52 @@
+.section-contact {
+    .row {
+        flex-wrap: wrap-reverse;
+
+        @include breakpoint(laptop) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__form {
+        width: 40%;
+        margin: 0 auto;
+
+        @include breakpoint(mobile) {
+            width: 90%;
+        }
+
+
+        label {
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+        }
+
+        .section {
+            &__text {
+                margin-left: 22px;
+                margin-bottom: 25px !important;
+            }
+        }
+
+        .wpcf7-form {
+            .col-sm-3 {
+                padding-right: 0 !important;
+            }
+
+            textarea {
+                min-height: 355px;
+            }
+
+            .select-span {
+                display: block;
+
+                &:after {
+                    top: 15%;
+                }
+            }
+        }
+    }
+}

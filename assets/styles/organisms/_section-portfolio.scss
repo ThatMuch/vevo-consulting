@@ -1,0 +1,37 @@
+.section-portfolio {
+    &__img {
+        img {
+            @extend .mb-3;
+
+            transition-duration: $transition_slow;
+            width: 100%;
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            img {
+                transform: scale(1.05);
+            }
+
+            .section-portfolio__title:before {
+                width: 50px;
+            }
+        }
+    }
+
+    &__title {
+        color: $color-primary;
+
+        &:before {
+            content: "";
+            height: 3px;
+            width: 0px;
+            background-color: $color-primary;
+            display: block;
+            bottom: 0;
+            transition-duration: $transition_slow;
+            margin-bottom: .8rem;
+        }
+    }
+}

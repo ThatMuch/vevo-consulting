@@ -1,0 +1,43 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+//=> templates/wp-home.php
+
+.blog {
+    &__categories {
+        margin-top: 200px;
+        background-color: $color-grey;
+        height: 536px;
+        position: relative;
+        &__title {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            gap: 50px;
+            transform: translateY(-100px);
+
+            &__name {
+                text-align: center;
+                margin: 0 auto;
+                color: $color-primary;
+                text-transform: uppercase;
+                font-weight: 700;
+                display: block;
+            }
+        }
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+}

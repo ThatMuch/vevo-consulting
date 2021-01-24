@@ -1,0 +1,27 @@
+.section-gallery {
+    .grid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 1fr;
+    }
+
+    a {
+        display: block;
+        overflow: hidden;
+        border-radius: $border-radius;
+
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+
+        img {
+            transition-duration: $transition_slow;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

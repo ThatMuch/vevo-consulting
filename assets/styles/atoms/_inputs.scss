@@ -1,0 +1,82 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+
+input:not([type='submit']), select, textarea {
+    border: 1px solid $color-grey2!important;
+
+    &:active, &:focus {
+        border: 1px solid $color-input-focus!important;
+    }
+}
+
+input, select {
+    height: 48px!important;
+}
+
+select {
+    color: $color-grey!important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    background: transparent!important;
+
+    option {
+        color: $color-input-value!important;
+
+        &:first-child {
+            color: $color-grey!important;
+        }
+    }
+
+}
+
+// ---------------------
+// CUSTOM INPUTS COMMONS
+// ---------------------
+
+// Custom arrow dropdown
+select::-ms-expand {
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+.select-span::after {
+    content: url("assets/images/icons/down-chevron.png");
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    z-index: -1;
+}
+
+// PLACEHOLDERS
+::-webkit-input-placeholder { /* Edge */
+    color: $color-grey!important;
+  }
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: $color-grey!important;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color-grey!important;
+}
+
+::placeholder {
+    color: $color-grey!important;
+}
+
+// REMOVE ARROWS ON INPUT NUMBER
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

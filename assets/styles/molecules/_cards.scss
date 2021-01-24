@@ -1,0 +1,126 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+
+/*=============================================
+=            Cards RS                   =
+=============================================*/
+.fts-jal-single-fb-post, .fts-tweeter-wrap {
+    padding: 20px !important;
+    box-shadow: $shadow;
+    background-color: $color-light;
+    margin-bottom: 30px;
+    border-radius: $border-radius;
+
+    .fts-jal-fb-user-name a, .fts-twitter-full-name {
+        color: $color-black;
+    }
+
+    .tweeter-info {
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    a {
+        color: $color-primary;
+    }
+}
+
+// Cacher le titre Facebook dans la colonne
+.fts-jal-fb-header {
+    display: none;
+}
+
+/*=====  End of Cards Facebook         ======*/
+
+/*=============================================
+=            Card Blog                        =
+=============================================*/
+
+.card-blog {
+    position: relative;
+    margin-bottom: 30px;
+
+    &_img {
+        object-fit: cover;
+        object-position: 50% 50%;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: $border-radius;
+    }
+
+    &_wrapper {
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+
+    &_title {
+        background-color: $color-grey;
+        padding: 15px;
+        border-radius: 8px;
+        width: 83%;
+        display: block;
+        position: absolute;
+        margin-top: -50px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100px;
+        transition: box-shadow .5s ease;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: -10px 10px 0px $color-secondary;
+        }
+
+        &.mobile {
+            height: 93px;
+            letter-spacing: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* number of lines to show */
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 65px;
+            text-align: center;
+            text-transform: inherit;
+            margin-bottom: 0;
+
+            @include breakpoint(mobile) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &_excerpt {
+        padding: 75px 15px 15px;
+    }
+}
+
+.card-blog-featured {
+    margin-bottom: 30px;
+    align-items: center;
+
+    h3 {
+        text-transform: inherit;
+    }
+
+    &_img {
+        width: 100%;
+        height: 100%;
+        border-radius: $border-radius;
+    }
+}
+
+/*=====  End of Card Blog              ======*/

@@ -1,0 +1,53 @@
+.section-faq {
+    &__accordion {
+        background-color: $color-grey;
+        border-radius: 39px;
+        padding: 10px 20px;
+
+        .card {
+            border: none;
+            background-color: transparent;
+
+            &:not(:last-child) {
+                position: relative;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    width: calc(100% + 40px);
+                    height: 1px;
+                    background-color: #fff;
+                    bottom: 0;
+                    left: -20px;
+                    position: absolute;
+                }
+            }
+        }
+
+        .card-header {
+            background-color: transparent;
+            border: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $color-primary;
+            padding: 1rem;
+
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
+
+            &-expand {
+                transition-duration: $transition_slow;
+                height: 3px;
+                width: 36px;
+                background-color: $color-primary;
+                display: block;
+                margin: 0 auto;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
