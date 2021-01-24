@@ -28,17 +28,18 @@ $element_width_mobile: 95vw; // default width of the .element content-div
 
 /* Presets
 /––––––––––––––––––––––––*/
-$color-primary: #EFAC8E;
-$color-primary-darker: #E6887C;
-$color-secondary: #655A90;
-$color-secondary-darker: #4B4683;
-$color-black: #4C545A;
-$color-dark: #75828B;
-$color-grey2: #B2C3CE;
-$color-grey1: #E3EAEF;
-$color-grey: #F4F8FA;
+$color-primary: #00656F;
+$color-primary-darker: #013F44;
+$color-primary-lighter: #B9D9C3;
+$color-secondary: #F0DA8A;
+$color-secondary-darker: #CFBB6F;
+$color-black: #1B241C;
+$color-dark: #3D403D;
+$color-grey2: #6E736F;
+$color-grey1: #C1C7C2;
+$color-grey: #EDF1EE;
 $color-light: #fff;
-$black: #000;
+$black: #1B241C;
 
 $color-input-focus: rgba(240, 195, 0, 0.25);
 $color-input-value: #495057;
@@ -50,11 +51,11 @@ $color-input-value: #495057;
 /* set base values */
 $text-fz: 1em;
 $text-scale-ratio: 1.2;
-$text-ff: "Montserrat", sans-serif;
+$text-ff: "Dosis", sans-serif;
 $text-c: $color-black;
 $text-fw: 400;
 $text-lh: 2;
-$text-heading: "Montserrat", sans-serif;
+$text-heading: "Elsie", cursive;
 
 /* type scale */
 $text-xs: calc(1em / (#{$text-scale-ratio} * #{$text-scale-ratio}));

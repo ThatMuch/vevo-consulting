@@ -9,11 +9,15 @@
 .footer {
     width: 100vw;
     margin-top: auto;
-    color: #fff;
+    color: rgba($color: #fff, $alpha: 0.5);
     background: $color-primary;
 
     a {
-        color: #fff;
+        color: rgba($color: #fff, $alpha: 0.5);
+
+        &:hover {
+            color: #fff;
+        }
     }
 
     &__upper {
@@ -22,6 +26,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        color: #fff;
 
         .container * {
             z-index: 3;
@@ -90,10 +95,6 @@
             a {
                 font-size: 1.5rem;
             }
-
-            &:hover i {
-                color: $color-primary;
-            }
         }
     }
 
@@ -140,7 +141,6 @@
 
     &__follow-us {
         margin-bottom: 5px;
-        font-family: $text-heading;
         font-size: 15px;
         font-weight: 700;
     }
@@ -162,7 +162,7 @@
     /*----------  Widgets  ----------*/
 
     .widget-title {
-        color: #fff;
+        color: rgba($color: #fff, $alpha: 0.5);
         margin-bottom: 1rem;
     }
 
@@ -170,7 +170,7 @@
         padding: 0;
 
         .nav-link {
-            color: #fff;
+            color: rgba($color: #fff, $alpha: 0.5);
             padding: 0 0 0.75rem 0;
         }
     }
@@ -189,6 +189,7 @@
 
             &:hover {
                 text-decoration: none;
+                color: #fff;
             }
         }
     }

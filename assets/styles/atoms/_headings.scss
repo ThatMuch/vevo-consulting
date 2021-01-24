@@ -27,12 +27,15 @@ h3 {
 
 h4 {
     @include heading-size(3);
+     text-transform: initial;
 }
 
 h5 {
     @include heading-size(2);
+     text-transform: initial;
 }
 
 h6 {
     @include heading-size(1);
+     text-transform: initial;
 }

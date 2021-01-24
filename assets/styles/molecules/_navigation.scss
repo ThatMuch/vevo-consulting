@@ -38,14 +38,13 @@ nav.navbar {
     }
 
     .nav-link {
-        font-family: $text-heading;
         text-transform: uppercase;
         font-weight: 700;
         font-size: 13px;
         color: #fff !important;
 
         &:hover {
-            opacity: .7;
+            color: $color-secondary !important;
         }
 
         @include breakpoint(laptop) {
@@ -63,6 +62,10 @@ nav.navbar {
                     border-style: solid;
                     border-color: #fff;
                 }
+
+                &:hover:after {
+                    border-color: $color-secondary;
+                }
             }
         }
     }
@@ -70,6 +73,10 @@ nav.navbar {
     .header__rs {
         .footer__rs__item {
             margin-right: 1.5rem;
+
+            a {
+                font-size: 1rem;
+            }
 
             &:last-child {
                 margin-right: 0 !important;
@@ -80,7 +87,7 @@ nav.navbar {
             }
 
             &:hover i {
-                opacity: .5;
+                color: $color-secondary !important;
             }
         }
     }
@@ -99,7 +106,7 @@ nav.navbar {
         }
 
         &-icon {
-           filter: invert(100%);
+            filter: invert(100%);
         }
     }
 }

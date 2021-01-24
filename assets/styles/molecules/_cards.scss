@@ -65,7 +65,6 @@
         padding: 15px;
         border-radius: 8px;
         width: 83%;
-        display: block;
         position: absolute;
         margin-top: -50px;
         left: 0;
@@ -74,7 +73,13 @@
         margin-right: auto;
         height: 100px;
         transition: box-shadow .5s ease;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
+
+        h3 {
+            font-family: $text-ff;
+        }
 
         &:hover {
             box-shadow: -10px 10px 0px $color-secondary;
@@ -114,6 +119,7 @@
 
     h3 {
         text-transform: inherit;
+        font-family: $text-ff;
     }
 
     &_img {
