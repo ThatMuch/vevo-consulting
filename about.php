@@ -35,6 +35,42 @@
 	</div>
 	</section>
 	<?php endif; ?>
+
+
+		<?php
+	$lowerSection = get_field('last_section');
+	if ( $lowerSection ) : ?>
+	<section class="section-lower">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+			<?php if ( $lowerSection['img'] ) : ?>
+				<img src="<?= $lowerSection['img']['url'] ?>" alt="<?= $lowerSection['img']['alt'] ?>" class="img-radius w-100">
+			<?php endif; ?>
+			</div>
+			<div class="col-sm-9">
+			<?php if( $lowerSection['title'] ) : ?>
+					<h3><?php echo $lowerSection['title']; ?></h3>
+			<?php endif; ?>
+			<?php if( $lowerSection['text'] ) : ?>
+				<p><?php echo $lowerSection['text']; ?></p>
+			<?php endif; ?>
+			<?php if ( $lowerSection['link'] ) :
+				$url = $lowerSection['link']['url'];
+				$title = $lowerSection['link']['title'];
+				$target = $lowerSection['link']['target'] ? $lowerSection['link']['target'] : '_self';
+				?>
+				<a href="<?php echo $url; ?>"
+				target="<?php echo $target;?>">
+				<?php echo $title; ?>
+			</a>
+			<?php endif; ?>
+
+			</div>
+		</div>
+	</div>
+	</section>
+	<?php endif; ?>
 </main>
 
 <?php get_footer(); ?>
