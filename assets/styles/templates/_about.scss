@@ -1,5 +1,4 @@
 .section-upper {
-    height: 574px;
     background-image: url("../../bg.png");
     background-color: $color-secondary;
     background-repeat: no-repeat;
@@ -7,27 +6,38 @@
     background-position: center;
     padding: 65px 0;
 
+    @include breakpoint(tablet) {
+        height: 574px;
+    }
+
+
     .img-shadow {
         box-shadow: -30px 0px 0 0 white;
-        transform: translateY(-100px);
-    }
-}
+        margin: 0 -30px 65px 60px;
 
-.section-lower {
-    padding: 65px 0 0;
-    transform: translateY(-219px);
+        @include breakpoint(tablet) {
+            transform: translateY(-100px);
+            margin: initial;
+        }
+    }
 }
 
 .section-middle {
     padding: 100px 0;
-    transform: translateY(-219px);
+
+    @include breakpoint(tablet) {
+        transform: translateY(-219px);
+    }
+
 
     .content {
         text-align: right;
 
         p {
-            margin-left: 45%;
-            margin-bottom: 0;
+            @include breakpoint(tablet) {
+                margin-left: 45%;
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -51,9 +61,15 @@
     .splide__arrows {
         width: 124px;
         position: absolute;
-        left: 39%;
-        bottom: 0;
         display: flex;
+        left: 0;
+        right: 0;
+
+        @include breakpoint(tablet) {
+            left: 39%;
+            bottom: 0;
+        }
+
 
         .splide__arrow {
             position: relative;
@@ -69,6 +85,17 @@
             &--prev {
                 margin-right: 10px;
             }
+        }
+    }
+}
+
+.section-lower {
+    padding: 65px 0 0;
+    transform: translateY(-219px);
+    img {
+        margin-bottom: 30px;
+        @include breakpoint(tablet) {
+            margin-bottom: 0;
         }
     }
 }
