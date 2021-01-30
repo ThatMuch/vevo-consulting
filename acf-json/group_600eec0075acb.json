@@ -82,8 +82,91 @@
             ]
         },
         {
+            "key": "field_60113bf6be6cc",
+            "label": "Section 2 : Valeurs",
+            "name": "middle_section",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_60113c30be6cd",
+                    "label": "title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60113c37be6ce",
+                    "label": "text",
+                    "name": "text",
+                    "type": "textarea",
+                    "instructions": "Limité à 300 caractères.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": 300,
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_60113c3fbe6cf",
+                    "label": "image",
+                    "name": "img",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
             "key": "field_600eed6248dd3",
-            "label": "Section 3",
+            "label": "Section 3 : Presentation",
             "name": "last_section",
             "type": "group",
             "instructions": "",
@@ -193,5 +276,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1611679428
+    "modified": 1611766124
 }
