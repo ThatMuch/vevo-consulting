@@ -73,5 +73,6 @@ $theme-colors: ("primary": $color-primary, "secondary": $color-secondary);
 @import "./templates/_post";
 @import "./templates/_subsite";
 @import "./templates/_about";
+@import "./templates/_services";
 
 @import "./splide.min.scss";

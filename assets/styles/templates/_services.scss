@@ -1,0 +1,36 @@
+.section-ateliers {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 50px;
+	padding-bottom: 50px;
+	height: 700px;
+
+    &__title {
+        font-family: $text-ff;
+        text-transform: initial;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+       // transform: translateY(210px);
+    }
+
+    .atelier {
+        &__img {
+            width: 315px;
+            height: 315px;
+            margin: 0 auto 20px;
+        }
+
+        &__title {
+            color: $color-secondary;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+}
