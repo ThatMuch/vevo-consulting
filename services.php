@@ -11,7 +11,7 @@
 ?>
 <?php /* Template Name: Services */ ?>
 <?php get_header(); ?>
-<main class="m-0">
+<main class="m-0 services">
 	<?php
 	$ateliers = get_field('ateliers');
 	if ($ateliers) :
@@ -58,15 +58,31 @@
 		</section>
 	<?php endif; ?>
 	<?php
-	var_dump(have_rows('services_sections'));
-	$sections = get_field('services_sections');
-	if (have_rows('services_sections')) :
+	if (have_rows('services_section')) :
 	?>
-	<section class="p-5">
+	<section class="section-text-image">
 		<div class="container">
-				<?php while( have_rows('services_sections') ) : the_row(); ?>
-				<div class="row">
-					<?php the_sub_field('title'); ?>
+				<?php while( have_rows('services_section') ) : the_row(); ?>
+								<div class="row mb-5">
+				    <div class="col-md-4 col-sm-12 section-text-image__image">
+						<?php  if (get_sub_field('img')) : $img = get_sub_field('img'); ?>
+								<img data-src="<?php  echo  $img['url']?>" class="img-fluid img-radius " />
+						<?php endif; ?>
+            		</div>
+					  <div class="col-md-8 col-sm-12 section-text-image__text">
+                <div class="section-text-image__text__inner">
+
+                        <?php if (get_sub_field('title')) : ?>
+                            <h2 class=" section__title"><?php echo get_sub_field('title'); ?></h2>
+                        <?php endif; ?>
+
+                    <!-- Text -->
+                    <?php if (get_sub_field('text')) : ?>
+                        <?php echo  get_sub_field('text'); ?>
+                    <?php endif; ?>
+                    <!-- Text -->
+                </div>
+            </div>
 				</div>
 				<?php endwhile; ?>
 		</div>

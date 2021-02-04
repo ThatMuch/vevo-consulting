@@ -4,8 +4,9 @@
     background-position: center;
     color: #fff;
     padding-top: 50px;
-	padding-bottom: 50px;
-	height: 700px;
+    padding-bottom: 50px;
+    height: 700px;
+    margin-bottom: 200px;
 
     &__title {
         font-family: $text-ff;
@@ -16,7 +17,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
-       // transform: translateY(210px);
+
+        // transform: translateY(210px);
+
     }
 
     .atelier {
@@ -33,4 +36,15 @@
             text-align: center;
         }
     }
+}
+
+.services .section-text-image {
+.section__title {
+
+    font-family: $text-ff;
+    text-transform: initial;
+}
+.row:nth-child(even){
+    flex-direction: row-reverse;
+}
 }
