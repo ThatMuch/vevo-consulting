@@ -70,3 +70,5 @@ register_post_type( "atelier", $args );
 
 }
 add_action( 'init', 'cptui_register_my_cpt' );
+
+require('functions/functions-sections.php');

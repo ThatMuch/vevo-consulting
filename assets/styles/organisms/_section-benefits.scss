@@ -1,0 +1,67 @@
+.section-tabs {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 0 300px !important;
+    margin-bottom: -340px;
+
+    .img-circle {
+        margin: 0 auto 1.5rem;
+    }
+
+    .item-title {
+        color: $color-primary;
+        font-family: $text-ff;
+        font-size: 1.2rem;
+    }
+
+    .item-desc {
+        color: $color-dark;
+    }
+
+    ul.nav {
+        border-bottom: 0;
+        justify-content: center;
+        margin-bottom: 50px;
+        background-color: #fff;
+        width: 100vw;
+        height: 59px;
+		@include breakpoint(tablet) {
+			height:63px;
+		}
+
+        .nav-link {
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $color-grey2;
+            border: 0;
+            cursor: pointer;
+            font-size: .9rem;
+
+            @include breakpoint(tablet) {
+                font-size: 1rem;
+            }
+
+
+            &:hover, &:focus {
+                border: 0;
+            }
+
+            &.active {
+                border: none;
+                color: $color-primary;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: calc(100% - 2rem);
+                    height: 2px;
+                    background-color: $color-primary;
+                    bottom: -15px;
+                    left: 1rem;
+                }
+            }
+        }
+    }
+}
