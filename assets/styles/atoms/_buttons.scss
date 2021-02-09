@@ -80,3 +80,23 @@ button, .btn {
         color: #fff !important;
     }
 }
+
+.btn-icon {
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 3rem;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    padding: 0;
+font-weight: 400;
+&:focus {outline: none;}
+    &.close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        line-height: 42px;
+        display: block;
+    }
+}

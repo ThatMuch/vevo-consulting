@@ -19,6 +19,7 @@
         color: $color-dark;
     }
 
+
     ul.nav {
         border-bottom: 0;
         justify-content: center;
@@ -26,13 +27,15 @@
         background-color: #fff;
         width: 100vw;
         height: 59px;
-		@include breakpoint(tablet) {
-			height:63px;
-		}
+
+        @include breakpoint(tablet) {
+            height: 63px;
+        }
+
 
         .nav-link {
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 500;
             color: $color-grey2;
             border: 0;
             cursor: pointer;

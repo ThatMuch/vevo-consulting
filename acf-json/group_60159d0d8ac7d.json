@@ -77,7 +77,7 @@
                 {
                     "key": "field_60159d702cf94",
                     "label": "",
-                    "name": "",
+                    "name": "type",
                     "type": "radio",
                     "instructions": "",
                     "required": 0,
@@ -127,5 +127,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1612029607
+    "modified": 1612875344
 }
