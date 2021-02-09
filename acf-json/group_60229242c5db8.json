@@ -1,0 +1,72 @@
+{
+    "key": "group_60229242c5db8",
+    "title": "Style",
+    "fields": [
+        {
+            "key": "field_6022925db3e40",
+            "label": "Background par défaut",
+            "name": "default_bg_light",
+            "type": "image",
+            "instructions": "Image de fond utilisée par défaut dans le header des pages quand l'image de couverture n'est pas présente.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_602292d8b3e41",
+            "label": "Background des modales",
+            "name": "default_bg_primary",
+            "type": "image",
+            "instructions": "Image de fond utilisée dans le header des modales des ateliers.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-mars-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1612878614
+}

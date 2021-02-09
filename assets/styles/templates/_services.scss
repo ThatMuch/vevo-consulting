@@ -69,11 +69,14 @@
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
         background-color: $color-primary;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100% 100%;
     }
 
     .modal-content {
         border-radius: $border-radius;
-        background-color: $color-grey1;
+        background-color: $color-primary-lighter;
     }
 
     .modal-body {

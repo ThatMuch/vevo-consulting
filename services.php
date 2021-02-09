@@ -110,7 +110,8 @@
        <button type="button" class="close btn-icon" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-		<div class="modal-header">
+		<?php $bg = get_field('default_bg_primary', 'option');?>
+		<div class="modal-header" style="background-image: url('<?= $bg?>')">
 		</div>
       <div class="modal-body">
         <div class="row">
