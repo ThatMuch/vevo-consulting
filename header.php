@@ -96,15 +96,16 @@
 			<?php endif; ?>
 		</div>
 	</nav>
-	<?php if (is_page() && !is_front_page() || is_single()) :
+	<?php
+		$bg_default = get_field('default_bg_light', 'option');
+	if (is_page() && !is_front_page() || is_single()) :
 		$background_image = get_the_post_thumbnail_url();
 		?>
-		<header class="page-header <?php echo $background_image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image ? $background_image : get_template_directory_uri()."/assets/images/bg.png";?>)">
+		<header class="page-header <?php echo $background_image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image ? $background_image : $bg_default; ?>)">
 			<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 		</header>
 		<?php elseif (is_home()) :
 			$background_image_home = get_the_post_thumbnail_url(get_option('page_for_posts'));
-			 $bg_default = get_field('default_bg_light', 'option');
 			?>
 					<header class="page-header <?php echo $background_image_home ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image_home ? $background_image_home : $bg_default; ?>)">
 			<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
