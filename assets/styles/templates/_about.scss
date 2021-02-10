@@ -35,6 +35,7 @@
 
         h3 {
             margin-bottom: 0;
+            font-family: $text-ff;
 
             @include breakpoint(tablet) {
                 transform: translateY(40px);

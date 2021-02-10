@@ -109,7 +109,8 @@
 				$target = $lowerSection['link']['target'] ? $lowerSection['link']['target'] : '_self';
 				?>
 				<a href="<?php echo $url; ?>"
-				target="<?php echo $target;?>">
+				target="<?php echo $target;?>"
+				class="link">
 				<?php echo $title; ?>
 			</a>
 			<?php endif; ?>
