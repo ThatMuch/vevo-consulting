@@ -28,6 +28,18 @@ img[data-src][src] {
     box-shadow: -10px 10px 0 0 rgba($color-primary-darker, 0.5);
 }
 
+.img-wrapper {
+    overflow: hidden;
+
+    img {
+        transition-duration: $transition_slow;
+    }
+
+    &:hover img {
+        transform: scale(1.2);
+    }
+}
+
 .img-circle {
     background: $color-light;
     width: 240px;
@@ -46,9 +58,5 @@ img[data-src][src] {
         height: 100%;
         object-fit: cover;
         transition-duration: $transition_slow;
-
-        &:hover {
-            transform: scale(1.2);
-        }
     }
 }

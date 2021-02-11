@@ -28,7 +28,9 @@
                               <a href="<?php if ( get_sub_field('link') ) : $link = get_sub_field('link'); echo  $link; endif; ?> ">
                                     <!-- Image -->
                                     <?php if (get_sub_field('image')) : $img = get_sub_field('image'); ?>
-                                          <img class="section-services__item__image img-fluid img-radius" data-src="<?php echo  $img['sizes']['medium'] ?>" alt="<?php echo  $img['alt']; ?>">
+                                    <div class="img-wrapper">
+                                          <img class="section-services__item__image img-fluid img-radius" data-src="<?php echo  $img['sizes']['large'] ?>" alt="<?php echo  $img['alt']; ?>">
+                                    </div>
                                     <?php endif; ?>
                                     <!-- Image -->
                                                 <!-- Icon title -->

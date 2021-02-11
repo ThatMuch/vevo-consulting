@@ -80,8 +80,8 @@
               <?php
                 $image = get_field('image', $category);?>
                 <div class="card-blog mb-3">
-                   <div class="card-blog_wrapper ">
-                  <img class="card-blog_img img-shadow" src="<?= $image['url'];?>" alt="<?= $category->cat_name;?>">
+                   <div class="card-blog_wrapper img-shadow img-wrapper img-radius">
+                  <img class="card-blog_img" src="<?= $image['url'];?>" alt="<?= $category->cat_name;?>">
                 </div>
                 </div>
               <p class="blog__categories__list__name">

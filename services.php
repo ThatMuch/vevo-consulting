@@ -36,17 +36,17 @@
 							);
 							$query = new WP_Query( $args );
 							if ( $query->have_posts() ) :
-
 								while ( $query->have_posts() ) :
 									$query->the_post();
-
 									$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 									<div class="service" data-toggle="modal" data-target="#modal-<?=$post->ID ?>">
 
 									<?php if($image) :?>
-										<img src="<?php echo $image[0]?>" class="card-blog_img img-shadow service__img"
-										alt="<?php the_title(); ?>"
-										 />
+										<div class="img-shadow img-radius img-wrapper">
+											<img src="<?php echo $image[0]?>" class="card-blog_img service__img"
+											alt="<?php the_title(); ?>"
+											 />
+										</div>
 									<?php else : ?>
 										<img src="<?php echo get_template_directory_uri() ; ?>/assets/images/default_image.png" class="card-blog_img img-shadow atelier__img" alt="<?php the_title(); ?>"/>
 									<?php endif; ?>
