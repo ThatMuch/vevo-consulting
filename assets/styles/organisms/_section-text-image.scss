@@ -5,12 +5,16 @@
     }
 
     &:last-of-type {
-        padding-bottom: 12rem !important;
+        padding-bottom: 6rem !important;
+
+        @include breakpoint(tablet) {
+            padding-bottom: 12rem !important;
+        }
     }
 
     &__image {
-        padding-left: 0;
-        padding-right: 0;
+        //padding-left: 0;
+        //padding-right: 0;
         margin-bottom: 40px;
 
         @include breakpoint(tablet) {
@@ -26,7 +30,7 @@
     }
 
     &__text {
-        padding: 0 !important;
+        //padding: 0 !important;
 
         &__inner {
             text-align: justify;

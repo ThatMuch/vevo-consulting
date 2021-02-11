@@ -65,13 +65,13 @@
 	<section class="section-text-image">
 		<div class="container">
 				<?php while( have_rows('services_section') ) : the_row(); ?>
-								<div class="row mb-5">
-				    <div class="col-md-4 col-sm-12 section-text-image__image">
+								<div class="row">
+				    <div class="col-md-6 col-sm-12 section-text-image__image">
 						<?php  if (get_sub_field('img')) : $img = get_sub_field('img'); ?>
 								<img data-src="<?php  echo  $img['url']?>" class="img-fluid img-radius " />
 						<?php endif; ?>
             		</div>
-					  <div class="col-md-8 col-sm-12 section-text-image__text">
+					  <div class="col-md-6 col-sm-12 section-text-image__text">
                 <div class="section-text-image__text__inner">
 
                         <?php if (get_sub_field('title')) : ?>

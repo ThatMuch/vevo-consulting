@@ -5,8 +5,13 @@
     color: #fff;
     padding-top: 50px;
     padding-bottom: 50px;
-    height: 700px;
-    margin-bottom: 200px;
+    height: 550px;
+    margin-bottom: 400px;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 350px;
+    }
+
 
     &__title {
         font-family: $text-ff;
@@ -16,7 +21,13 @@
     .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
+        gap: 10px 15px;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            gap: 30px 50px;
+        }
+
 
         // transform: translateY(210px);
    
@@ -30,9 +41,15 @@
         }
 
         .img-wrapper {
-            width: 315px;
-            height: 315px;
+            width: 160px;
+            height: 160px;
             margin: 0 auto 20px;
+
+            @include breakpoint(tablet) {
+                width: 275px;
+                height: 275px;
+            }
+
 
             &:hover img {
                 transform: scale(1.2);
@@ -44,14 +61,20 @@
             font-weight: 700;
             text-transform: uppercase;
             text-align: center;
+            margin-bottom: 0;
         }
     }
 }
 
 .services .section-text-image {
+    .row {
+        margin-bottom: 6rem;
+    }
+
     .section__title {
         font-family: $text-ff;
         text-transform: initial;
+        text-align: left;
     }
 
     .row:nth-child(even) {
