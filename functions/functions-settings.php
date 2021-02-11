@@ -52,6 +52,7 @@ function mars_enqueue() {
   wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.3.1');
   wp_enqueue_script( 'jquery' );
   // scripts
+  wp_enqueue_script('load-more', get_template_directory_uri() . '/inc/assets/js/myloadmore.js', array(), '1.0.0', true);
   wp_enqueue_script('splide', get_template_directory_uri().'/inc/assets/js/splide.min.js', array(), '', true);
   wp_register_script('mars_/scripts', get_template_directory_uri() . '/script.min.js', false, array( 'jquery' ), true);
   wp_enqueue_script('mars_/scripts');
@@ -346,7 +347,6 @@ function load_more_posts() {
     die;
 }
 global $wp_query;
-wp_enqueue_script('load-more', get_template_directory_uri() . '/inc/assets/js/myloadmore.js', array(), '1.0.0', true);
 
     $published_posts = $wp_query->found_posts;
     $posts_per_page = get_option('posts_per_page');
