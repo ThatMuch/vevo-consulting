@@ -11,20 +11,37 @@
     &__categories {
         margin-top: 200px;
         background-color: $color-grey;
-        height: 536px;
+        height: 336px;
         position: relative;
+
+        @include breakpoint(tablet) {
+            height: 436px;
+        }
+
+
         &__title {
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 36px;
+            font-size: 26px;
             text-align: center;
+
+            @include breakpoint(tablet) {
+                font-size: 36px;
+            }
         }
 
         &__list {
             display: grid;
-            grid-template-columns: repeat(3, 200px);
-            gap: 50px;
-            transform: translateY(-100px);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            transform: translate(5px, -60px);
+
+            @include breakpoint(tablet) {
+                gap: 50px;
+                transform: translateY(-100px);
+                grid-template-columns: repeat(3, 200px);
+            }
+
 
             &__name {
                 text-align: center;

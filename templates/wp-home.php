@@ -64,11 +64,9 @@
 </section>
 <section class="blog__categories">
   <div class="container h-100">
-    <div class="row h-100">
-      <div class="col-sm-3 d-flex align-items-center">
-        <p class="blog__categories__title">Retrouvez nos articles par catégories</p>
-      </div>
-      <div class="col-sm-9 d-flex justify-content-center">
+
+
+      <div class="d-flex justify-content-center flex-column align-items-center">
         <div class="blog__categories__list">
           <?php $categories = get_categories(array('parent' => $parent_category, 'hide_empty' => 0));?>
           <?php foreach ($categories as $category) :
@@ -90,8 +88,9 @@
             </a>
           <?php endforeach; ?>
         </div>
+        <p class="blog__categories__title">Retrouvez nos articles par catégories</p>
       </div>
-    </div>
+
   </div>
 </section>
 

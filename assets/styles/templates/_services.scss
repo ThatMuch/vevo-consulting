@@ -82,16 +82,22 @@
     }
 }
 
+.modal.show {
+    display: grid !important;
+    place-items: center;
+}
+
 .modal-dialog {
-    width: 80vw;
+    width: 95vw;
 
     @include breakpoint(tablet) {
+        width: 80vw;
         max-width: inherit;
     }
 
 
     .modal-header {
-        height: 266px;
+        height: 150px;
         border: 0;
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
@@ -99,6 +105,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 100% 100%;
+
+        @include breakpoint(tablet) {
+            height: 266px;
+        }
     }
 
     .modal-content {
@@ -107,32 +117,57 @@
     }
 
     .modal-body {
-        padding: 50px 70px;
-        margin-top: -140px;
+        padding: 25px 35px;
+        margin-top: -100px;
+
+        @include breakpoint(tablet) {
+            margin-top: -140px;
+            padding: 50px 70px;
+        }
+
 
         .title {
-            color: #fff;
             font-family: $text-ff;
             font-weight: 500;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: $color-primary-darker;
+
+            @include breakpoint(tablet) {
+                margin-bottom: 4rem;
+                text-align: left;
+                color: #fff;
+            }
         }
 
         .desc {
             color: $color-primary-darker;
             margin-bottom: 2rem;
+            text-align: justify;
+
+            @include breakpoint(tablet) {
+                text-align: left;
+            }
         }
 
         img {
-            height: 250px;
-            width: 250px;
+            height: 215px;
+            width: 215px;
             margin-left: auto;
             margin-right: auto;
             display: block;
             transform: translateX(10px);
+
+            @include breakpoint(tablet) {
+                height: 250px;
+                width: 250px;
+            }
         }
 
         .pl-5 {
-            padding-left: 3rem;
+            @include breakpoint(tablet) {
+                padding-left: 3rem;
+            }
         }
     }
 
@@ -143,6 +178,12 @@
         text-transform: uppercase;
         text-align: center;
         padding-bottom: 5px;
+        margin-bottom: 2rem;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 0;
+        }
+
 
         ul {
             padding: 0;
