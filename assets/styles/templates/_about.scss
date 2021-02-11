@@ -54,7 +54,10 @@
     &__title {
         text-align: right;
         margin-bottom: 0;
-        transform: translateY(20px);
+
+        @include breakpoint(tablet) {
+            transform: translateY(20px);
+        }
     }
 
     .img {
