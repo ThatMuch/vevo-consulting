@@ -190,7 +190,7 @@ function vevo_section_articles() {
 /––––––––––––––––––––––––*/
 function vevo_section_benefits() {
   ob_start('sanitize_output');
-    include (get_template_directory_uri().'/templates/section-benefits.php');
+    include (get_theme_root().'/vevo-consulting/templates/section-benefits.php');
   return ob_get_flush();
 }
 
