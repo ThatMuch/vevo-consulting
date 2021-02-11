@@ -46,6 +46,7 @@ nav.navbar {
 
         &:hover {
             color: $color-secondary !important;
+            text-decoration: underline;
         }
 
         @include breakpoint(laptop) {
