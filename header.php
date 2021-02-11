@@ -53,7 +53,7 @@
 					'menu_id'        => 'menu-main',
 					'container'      => false,
 					'depth'          => 2,
-					'menu_class'     => 'navbar-nav mr-auto',
+					'menu_class'     => 'navbar-nav m-auto',
 					'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
 					'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
 				));
@@ -62,7 +62,7 @@
 
 			<?php if (have_rows('rs', 'options')) : ?>
 				<?php while (have_rows('rs', 'options')) : the_row(); ?>
-					<ul class="navbar-nav ml-auto header__rs">
+					<ul class="navbar-nav mr-auto header__rs">
 						<?php if (get_sub_field('facebook')) : ?>
 							<li class="footer__rs__item">
 								<a href="<?php the_sub_field('facebook'); ?>" target="_blank">
