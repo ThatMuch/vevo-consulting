@@ -14,8 +14,9 @@
 <main class="mt-0">
 	<?php
 	$upperSection = get_field('upper_section');
+	$bg = get_field('default_bg_section_light', 'option');
 	if ( $upperSection ) : ?>
-	<section class="section-upper" style="background-image: url(<?= get_stylesheet_directory_uri();?>/assets/bg.png)">
+	<section class="section-upper" style="background-image: url(<?= $bg;?>)">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3">

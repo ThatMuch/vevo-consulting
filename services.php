@@ -14,9 +14,10 @@
 <main class="m-0 services">
 	<?php
 	$ateliers = get_field('ateliers');
+	$bg = get_field('default_bg_section_primary', 'option');
 	if ($ateliers) :
 		?>
-		<section class="section-ateliers" style="background-image: url('<?= $ateliers["background"] ?>')">
+		<section class="section-ateliers" style="background-image: url('<?= $bg ?>')">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
