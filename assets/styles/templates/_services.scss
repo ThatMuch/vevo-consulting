@@ -36,9 +36,12 @@
     .service {
         cursor: pointer;
 
-        &:last-child p, &:nth-last-child(2) p {
-            color: $color-primary;
+        @include breakpoint(tablet) {
+            &:first-child p, &:nth-child(2) p {
+                color: #fff;
+            }
         }
+
 
         .img-wrapper {
             width: 160px;
@@ -57,7 +60,7 @@
         }
 
         &__title {
-            color: #fff;
+            color: $color-primary;
             font-weight: 700;
             text-transform: uppercase;
             text-align: center;
@@ -198,6 +201,14 @@
             &:not(:last-child) {
                 border-bottom: 1px solid $color-grey1;
             }
+        }
+    }
+
+    .btn {
+        display: block;
+
+        @include breakpoint(tablet) {
+            display: inline;
         }
     }
 }

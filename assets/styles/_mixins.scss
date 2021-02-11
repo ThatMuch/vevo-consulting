@@ -53,8 +53,10 @@ $amplifier-heading: 1.5;
 @mixin heading-size($size) {
     font-size: $size * $step-size-heading * $amplifier-heading + rem;
 
-    @include breakpoint(mobile) {
-        font-size: ($size - 1) * $step-size-heading * $amplifier-heading + rem;
+    @if $size > 3 {
+        @include breakpoint(mobile) {
+            font-size: ($size - 1) * $step-size-heading * $amplifier-heading + rem;
+        }
     }
 }
 

@@ -43,10 +43,22 @@ nav.navbar {
         font-weight: 700;
         font-size: 13px;
         color: #fff !important;
+        position: relative;
 
         &:hover {
             color: $color-secondary !important;
-            text-decoration: underline;
+
+            &::after {
+                content: '';
+                width: calc(100% - 25px);
+                position: absolute;
+                left: 50%;
+                bottom: 2px;
+                transform: translate(-50%, 0);
+                border-width: 0 0 1px;
+                border-style: solid;
+                border-color: $color-secondary;
+            }
         }
 
         @include breakpoint(laptop) {
