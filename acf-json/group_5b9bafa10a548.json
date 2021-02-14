@@ -1088,7 +1088,7 @@
                     "key": "layout_601d3f9c56491",
                     "name": "benefits",
                     "label": "Benefices",
-                    "display": "block",
+                    "display": "row",
                     "sub_fields": [
                         {
                             "key": "field_601d3fbb56492",
