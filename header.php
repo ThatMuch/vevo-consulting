@@ -114,7 +114,7 @@
 			$category = get_queried_object();
 			$image = get_field('image', $category);
 			?>
-			<header class="page-header" style="background-image: url(<?= $image['url'];?>)">
+			<header class="page-header <?php echo $image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $image ? $image['url'] : $bg_default; ?>">
 				<h1 class="page-title screen-reader-text">
 					<?php
 					if (is_day()) :
