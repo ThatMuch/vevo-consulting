@@ -16,13 +16,13 @@
 <ul class="nav nav-tabs" id="benefits" role="tablist">
 <?php for ($i=0; $i < count($tabs) ; $i++) { ?>
   <li class="nav-item" role="presentation">
-    <a class="nav-link <? echo $i === 0 ? ' active' : ''?>"
-	id="b-<? echo $i?>-link"
+    <a class="nav-link <?= $i === 0 ? ' active' : ''?>"
+	id="b-<?= $i?>-link"
 	data-toggle="tab"
-	data-target="#b-tab-<? echo $i?>"
+	data-target="#b-tab-<?= $i?>"
 	role="tab"
-	aria-controls="b-tab-<? echo $i?>"
-	aria-selected="<? echo $i === 0 ? 'true' : 'false' ?>"><? echo $tabs[$i]['label_tab']?></a>
+	aria-controls="b-tab-<?= $i?>"
+	aria-selected="<?= $i === 0 ? 'true' : 'false' ?>"><?= $tabs[$i]['label_tab']?></a>
   </li>
 <?php }?>
 
