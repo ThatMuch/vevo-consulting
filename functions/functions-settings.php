@@ -321,11 +321,9 @@ function excerpt($num) {
 
 /* 2.12 LOAD MORE
 /––––––––––––––––––––––––––––––––––––––*/
-add_action('wp_ajax_load_more', 'load_more_posts');
-add_action('wp_ajax_nopriv_load_more', 'load_more_posts');
+
 
 function load_more_posts() {
-
     if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'load_more_nonce')) {
         exit;
     }
@@ -334,7 +332,6 @@ function load_more_posts() {
     $args['paged'] = $_POST['page'] + 1;
     $args['post_status'] = 'publish';
     $post_type = $args['post_type'];
-
     query_posts( $args );
 
     if (have_posts()):
@@ -346,15 +343,19 @@ function load_more_posts() {
 
     die;
 }
-global $wp_query;
 
-    $published_posts = $wp_query->found_posts;
+add_action('wp_ajax_load_more', 'load_more_posts');
+add_action('wp_ajax_nopriv_load_more', 'load_more_posts');
+
+global $query;
+
+    $published_posts = $query->found_posts;
     $posts_per_page = get_option('posts_per_page');
     $page_number_max = ceil($published_posts / $posts_per_page);
 // TODO : get max by query
 wp_localize_script( 'load-more', 'load_more', array(
     'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php',
-    'posts' => json_encode( $wp_query->query_vars ),
+    'posts' => json_encode( $query->query_vars ),
     'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
     'max_page' =>  $page_number_max,
     'nonce' => wp_create_nonce('load_more_nonce'),

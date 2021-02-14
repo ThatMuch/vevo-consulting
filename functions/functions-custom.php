@@ -82,4 +82,31 @@ function themeprefix_vidbg_tap_to_unmute_text( $use_old ) {
 }
 add_filter( 'vidbg_tap_to_unmute_text', 'themeprefix_vidbg_tap_to_unmute_text' );
 
+/* 2.12 LOAD MORE
+/––––––––––––––––––––––––––––––––––––––*/
+wp_enqueue_script('load-more', get_template_directory_uri() . '/inc/assets/js/myloadmore.js', array(), '1.0.0', true);
 
+function load_more_posts() {
+    if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'load_more_nonce')) {
+        exit;
+    }
+
+    $args = json_decode( stripslashes( $_POST['query'] ), true );
+    $args['paged'] = $_POST['page'] + 1;
+    $args['post_status'] = 'publish';
+    $post_type = $args['post_type'];
+
+    query_posts( $args );
+
+    if (have_posts()):
+        while (have_posts()) : the_post();
+                get_template_part('templates/wp', 'post');
+        endwhile;
+
+    endif;
+
+    die;
+}
+
+add_action('wp_ajax_load_more', 'load_more_posts');
+add_action('wp_ajax_nopriv_load_more', 'load_more_posts');

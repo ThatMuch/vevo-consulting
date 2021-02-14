@@ -7,8 +7,6 @@ $('#load-more').click(function () {
 			'nonce': load_more.nonce
 		};
 
-
-
 	$.ajax({
 		url: load_more.ajaxurl,
 		data: data,
@@ -17,7 +15,7 @@ $('#load-more').click(function () {
 			button.text('Chargement...');
 		},
 		success: function (data) {
-			console.log(load_more);
+			console.log(data);
 			if (data) {
 				//reset button text
 				button.text('Afficher plus');
