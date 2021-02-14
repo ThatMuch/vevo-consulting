@@ -32,17 +32,17 @@
 <?php for ($y=0; $y < count($tabs) ; $y++) {
  $list = $tabs[$y]['list'];
 ?>
-  <div class="tab-pane fade <? echo $y === 0 ? ' show active' : ''?>"
-  id="b-tab-<? echo $y?>"
+  <div class="tab-pane fade <?= $y === 0 ? ' show active' : ''?>"
+  id="b-tab-<?= $y?>"
   role="tabpanel"
-  aria-labelledby="b-<? echo $y?>-link">
-	<h2 class="text-center mb-5"><? echo $tabs[$y]['title']?></h2>
+  aria-labelledby="b-<?= $y?>-link">
+	<h2 class="text-center mb-5"><?= $tabs[$y]['title']?></h2>
 	<div class="row">
 	<?php foreach ($list as $item ) : $image = $item['img']; ?>
 	<div class="col-sm-4 text-center">
-		<img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" class="img-circle img-shadow"/>
-		<h3 class="item-title"><? echo $item['title'] ?></h3>
-		<p class="item-desc"><? echo $item['desc'] ?></p>
+		<img src="<?= $image['sizes']['medium']; ?>" alt="<?= $image['alt']; ?>" class="img-circle img-shadow"/>
+		<h3 class="item-title"><?= $item['title'] ?></h3>
+		<p class="item-desc"><?= $item['desc'] ?></p>
 	</div>
 	<?php endforeach; ?>
 	</div>
