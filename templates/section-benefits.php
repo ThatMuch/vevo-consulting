@@ -12,7 +12,7 @@
  */
 ?>
 <?php $tabs = get_sub_field('tab');?>
-<section class="section section-tabs" style="background-image: url(<? echo get_sub_field('background') ?>)">
+<section class="section section-tabs" style="background-image: url(<?= get_sub_field('background') ?>)">
 <ul class="nav nav-tabs" id="benefits" role="tablist">
 <?php for ($i=0; $i < count($tabs) ; $i++) { ?>
   <li class="nav-item" role="presentation">
