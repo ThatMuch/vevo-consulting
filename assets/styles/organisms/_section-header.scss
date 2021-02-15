@@ -1,48 +1,9 @@
 .section-header {
-    background-color: #fff;
-    position: relative;
-    height: $size-header;
-    overflow: hidden;
     .section__title {
         color: $color-light;
     }
 
-    @include breakpoint(tablet) {
-        display: flex;
-        align-items: center;
-    }
-
-
-    .section-background-image {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-size: cover;
-    }
-
-    &__content {
-        width: 100%;
-
-        @include breakpoint(tablet) {
-            width: 75%;
-        }
-    }
-
     .section__lead {
-        animation-delay: .2s;
-        color: #fff;
-        line-height: 60px;
-        letter-spacing: 1px;
-        margin-bottom: 25px;
-        font-weight: 400;
         font-family: $text-ff;
-        text-transform: initial;
-
-        @include breakpoint(mobile) {
-            font-size: 22px;
-            line-height: 30px;
-        }
     }
 }

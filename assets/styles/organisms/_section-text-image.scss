@@ -46,7 +46,8 @@
         text-align: center;
     }
 
-    /*     &__text__inner {
-            max-height: 300px;
-        } */
+    &__content {
+        height: 0;
+        overflow: hidden;
+    }
 }
