@@ -93,3 +93,7 @@ footer .inner {
         max-width: 1250px !important;
     }
 }
+
+body.modal-open {
+    position: fixed;
+}

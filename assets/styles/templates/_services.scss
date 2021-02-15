@@ -160,8 +160,9 @@
             margin-right: auto;
             display: block;
             transform: translateX(10px);
+            object-fit: cover;
 
-            @include breakpoint(tablet) {
+            @include breakpoint(desktop) {
                 height: 250px;
                 width: 250px;
             }

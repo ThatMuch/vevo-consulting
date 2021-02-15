@@ -113,8 +113,8 @@
 			$query->the_post();
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 			?>
-<div class="modal fade" id="modal-<?=$post->ID ?>" tabindex="-1" aria-labelledby="modal-<?=$post->ID ?>" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+<div class="modal fade" id="modal-<?=$post->ID ?>" tabindex="-1" aria-labelledby="modal-<?=$post->ID ?>" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
        <button type="button" class="close btn-icon" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -124,7 +124,7 @@
 		</div>
       <div class="modal-body">
         <div class="row">
-			<div class="col-sm-3">
+			<div class="col-md-3 col-lg-4">
 				<img src="<?= $image[0] ?>" alt="" class="img-shadow img-radius img-fluid mb-5">
 				<div class="services_list">
 					<ul>
@@ -135,7 +135,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-sm-9 pl-5">
+			<div class="col-md-9 col-lg-8 pl-5">
 				<h2 class="title"><?php the_title(); ?></h2>
 				<?php if ( get_field('desc') ) : ?>
 					<p class="desc"><?php echo get_field('desc'); ?></p>
