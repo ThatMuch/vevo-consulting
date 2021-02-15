@@ -89,7 +89,7 @@
 		<?php
 	$lowerSection = get_field('last_section');
 	if ( $lowerSection ) : ?>
-	<section class="section-lower">
+	<section class="section-lower section-text-image">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3">
