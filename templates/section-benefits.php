@@ -36,7 +36,7 @@
   id="b-tab-<?= $y?>"
   role="tabpanel"
   aria-labelledby="b-<?= $y?>-link">
-	<h2 class="text-center mb-5"><?= $tabs[$y]['title']?></h2>
+	<p class="tab-title"><?= $tabs[$y]['title']?></p>
 	<div class="row">
 	<?php foreach ($list as $item ) : $image = $item['img']; ?>
 	<div class="col-sm-4 text-center">

@@ -172,6 +172,16 @@
                 padding-left: 3rem;
             }
         }
+
+        .accordion.section-faq__accordion {
+            background-color: $color-primary-lighter;
+
+            .card:not(:last-child) {
+                &:after {
+                    background-color: $color-primary;
+                }
+            }
+        }
     }
 
     .services_list {
@@ -208,7 +218,7 @@
         display: block;
 
         @include breakpoint(tablet) {
-            display: inline;
+            display: inline-block;
         }
     }
 }

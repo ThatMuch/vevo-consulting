@@ -81,10 +81,18 @@
 
                     <!-- Text -->
                     <?php if (get_sub_field('text')) : ?>
-                        <?php echo  get_sub_field('text'); ?>
+						<div >
+							<?php echo  get_sub_field('text'); ?>
+						</div>
                     <?php endif; ?>
                     <!-- Text -->
+					<?php if ( get_sub_field('link') ) :
+						$link = get_sub_field('link');
+						?>
+						<a href="<?php echo  $link['url']; ?>" target="<?php echo $link['target'];?>" class="btn btn-primary mt-3"><?php echo  $link['title']; ?></a>
+					<?php endif; ?>
                 </div>
+
             </div>
 				</div>
 				<?php endwhile; ?>
@@ -132,7 +140,38 @@
 				<?php if ( get_field('desc') ) : ?>
 					<p class="desc"><?php echo get_field('desc'); ?></p>
 				<?php endif; ?>
-				<a href="" class="btn btn-primary">Je m'inscris</a>
+				<a href="" class="btn btn-primary mb-5">Je m'inscris</a>
+
+<div class="accordion section-faq__accordion" id="faq-accordion">
+            <!-- FAQ -->
+            <?php if ( have_rows('accordeon') ) :  $i =0; ?>
+                <?php while( have_rows('accordeon') ) : the_row();?>
+                    <div class="card">
+                        <div class="card-header collapsed" id="heading-<?php echo  $i ?>" data-toggle="collapse" data-target="#collapse-<?php echo  $i ?>" aria-expanded="true" aria-controls="collapseOne">
+                        	<div class="row">
+                            	<div class="col-10 col-md-11">
+									<?php the_sub_field('title'); ?>
+								</div>
+                                <div class="col-2 col-md-1 d-flex align-items-center">
+                                <span class="card-header-expand"></span>
+                            	</div>
+                        	</div>
+                        </div>
+
+                        <div id="collapse-<?php echo  $i ?>" class="collapse" aria-labelledby="heading-<?php echo  $i ?>" data-parent="#faq-accordion">
+                            <div class="card-body">
+                                <p class="answer"><?php the_sub_field('text'); ?></p>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php $i++; endwhile; ?>
+
+            <?php endif; ?>
+
+            <!-- FAQ -->
+
+        </div>
 			</div>
 		</div>
       </div>

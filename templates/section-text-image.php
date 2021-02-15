@@ -29,14 +29,16 @@
 
                     <!-- Text -->
                     <?php if (get_sub_field('text')) : ?>
-                        <?php echo  get_sub_field('text'); ?>
+                        <div class="section-text-image__content">
+                            <?php echo  get_sub_field('text'); ?>
+                        </div>
                     <?php endif; ?>
                     <!-- Text -->
                    <!-- Buttons -->
                    <?php if ( get_sub_field('button') ) : $link = get_sub_field('button'); ?>
-                <div target="<?php echo  $link['target']; ?>">
-                    <a class="link" href="<?php echo  $link['url']; ?>">
-                        <?php echo  $link['title']; ?>
+                <div>
+                    <a class="link" href="">
+                        Lire plus
                     </a>
                 </div>
                 <?php endif; ?>

@@ -1,7 +1,7 @@
 .section-text-image {
     .row {
-        align-items: center;
         position: relative;
+        align-items: inherit;
     }
 
     &:last-of-type {
@@ -45,4 +45,8 @@
     &__btn {
         text-align: center;
     }
+
+    /*     &__text__inner {
+            max-height: 300px;
+        } */
 }

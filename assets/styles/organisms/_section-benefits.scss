@@ -9,16 +9,23 @@
         margin: 0 auto 1.5rem;
     }
 
+    .tab-title {
+        font-weight: 600;
+        font-size: 1.3rem;
+        max-width: 40%;
+        margin: 0 auto 4rem;
+        text-align: center;
+    }
+
     .item-title {
         color: $color-primary;
         font-family: $text-ff;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .item-desc {
         color: $color-dark;
     }
-
 
     ul.nav {
         border-bottom: 0;

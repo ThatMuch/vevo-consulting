@@ -19,13 +19,12 @@ button, .btn {
     transition-duration: $transition_slow;
 
     &:hover, &:active, &:focus {
-        //
-
+        outline: none;
     }
 
     &:disabled {
         //
-
+   
     }
 }
 
@@ -34,14 +33,14 @@ button, .btn {
 
     &:hover, &:active, &:focus {
         //
-
+   
     }
 }
 
 .btn.btn-secondary {
     &:hover, &:active, &:focus {
         //
-
+   
     }
 }
 
@@ -57,7 +56,7 @@ button, .btn {
 .btn.btn-outline-secondary {
     &:hover, &:active, &:focus {
         //
-
+   
     }
 }
 
@@ -66,7 +65,7 @@ button, .btn {
 
     &:hover, &:active, &:focus {
         //
-
+   
     }
 }
 
@@ -90,13 +89,30 @@ button, .btn {
     height: 42px;
     text-align: center;
     padding: 0;
-font-weight: 400;
-&:focus {outline: none;}
+    font-weight: 400;
+
+    &:focus {
+        outline: none;
+    }
+
     &.close {
         position: absolute;
         right: 10px;
         top: 10px;
         line-height: 42px;
         display: block;
+    }
+}
+
+button.link {
+    border: 0;
+    background-color: inherit;
+    color: $a__linkcolor;
+    text-decoration: underline;
+    padding: 0;
+    font-weight: normal;
+
+    &:hover, &:active, &:focus {
+        outline: none;
     }
 }

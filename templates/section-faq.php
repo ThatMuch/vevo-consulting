@@ -24,7 +24,7 @@
 
                 <?php while( have_rows('faq') ) : the_row();?>
                     <div class="card">
-                        <div class="card-header" id="heading-<?php echo  $i ?>" data-toggle="collapse" data-target="#collapse-<?php echo  $i ?>" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="card-header collapsed" id="heading-<?php echo  $i ?>" data-toggle="collapse" data-target="#collapse-<?php echo  $i ?>" aria-expanded="true" aria-controls="collapseOne">
                         <div class="row">
                             <div class="col-10 col-md-11"><?php the_sub_field('question'); ?></div>
                                                         <div class="col-2 col-md-1 d-flex align-items-center">
