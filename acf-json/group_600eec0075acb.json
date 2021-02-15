@@ -218,21 +218,6 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_600eee2bee4e7",
-                    "label": "link",
-                    "name": "link",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                },
-                {
                     "key": "field_600eee35ee4e8",
                     "label": "Image",
                     "name": "img",

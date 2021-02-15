@@ -102,20 +102,15 @@
 					<h3><?php echo $lowerSection['title']; ?></h3>
 			<?php endif; ?>
 			<?php if( $lowerSection['text'] ) : ?>
-				<p><?php echo $lowerSection['text']; ?></p>
+				<div class="section-text-image__content">
+					<p><?php echo $lowerSection['text']; ?></p>
+				</div>
 			<?php endif; ?>
-			<?php if ( $lowerSection['link'] ) :
-				$url = $lowerSection['link']['url'];
-				$title = $lowerSection['link']['title'];
-				$target = $lowerSection['link']['target'] ? $lowerSection['link']['target'] : '_self';
-				?>
-				<a href="<?php echo $url; ?>"
-				target="<?php echo $target;?>"
-				class="link">
-				<?php echo $title; ?>
-			</a>
-			<?php endif; ?>
-
+			    <div>
+                    <button class="link">
+                        Lire plus
+                    </button>
+                </div>
 			</div>
 		</div>
 	</div>

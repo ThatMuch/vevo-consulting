@@ -37,9 +37,9 @@
                    <!-- Buttons -->
                    <?php if ( get_sub_field('button') ) : $link = get_sub_field('button'); ?>
                 <div>
-                    <a class="link" href="">
+                    <button class="link">
                         Lire plus
-                    </a>
+                    </button>
                 </div>
                 <?php endif; ?>
                 <!-- Button -->
