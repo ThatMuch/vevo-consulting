@@ -17,15 +17,15 @@ nav.navbar {
     height: $size-navbar;
     background-color: $color-primary;
 
-    img.img_logo {
-        width: 12rem;
-    }
-
-    .logo  {
+    .navbar-brand {
         width: 12rem;
         height: calc(#{$size-navbar} - 20px);
-        background-repeat: no-repeat;
-        background-size: contain !important;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 
     .navbar-collapse.show {

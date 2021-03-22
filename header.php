@@ -35,12 +35,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<div class="container">
 			<a class="navbar-brand" href="<?php echo  site_url(); ?>">
-
-			<img src="<?php echo $image[0]; ?>" alt="Vevo Consulting" class="img_logo">
-				<!-- <div
-				class="logo"
-				style="background-image: url('<?php //echo get_template_directory_uri()?>/assets/images/MarsLogoBlack.webp')">
-				</div> -->
+			<img data-src="<?php echo $image[0] ? $image[0] : get_template_directory_uri()."/assets/images/MarsLogoWhite.webp"; ?>" alt="logo footer">
 			</a>
 			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e('Toggle Navigation', 'theme-textdomain'); ?>">
 				<span class="navbar-toggler-icon"></span>
