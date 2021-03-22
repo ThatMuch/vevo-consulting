@@ -36,7 +36,7 @@
 		<div class="container">
 			<a class="navbar-brand" href="<?php echo  site_url(); ?>">
 
-			<img src="<?php echo $image[0]; ?>" alt="Vevo Consulting">
+			<img src="<?php echo $image[0]; ?>" alt="Vevo Consulting" class="img_logo">
 				<!-- <div
 				class="logo"
 				style="background-image: url('<?php //echo get_template_directory_uri()?>/assets/images/MarsLogoBlack.webp')">

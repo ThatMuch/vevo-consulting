@@ -17,6 +17,10 @@ nav.navbar {
     height: $size-navbar;
     background-color: $color-primary;
 
+    img.img_logo {
+        width: 12rem;
+    }
+
     .logo  {
         width: 12rem;
         height: calc(#{$size-navbar} - 20px);
