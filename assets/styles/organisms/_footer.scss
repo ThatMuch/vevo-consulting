@@ -181,6 +181,8 @@
 
     .menu {
         margin-left: 40px !important;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .widget.widget_nav_menu {
