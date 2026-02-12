@@ -12,7 +12,7 @@
  */
 ?>
 <?php $fond = get_sub_field('fond'); ?>
-<section class="section section-services <?php echo  $fond == "Primary" ? "bg-primary": $fond == "Gris" ? "bg-light" : "" ?>">
+<section class="section section-services <?php echo  ($fond == "Primary") ? "bg-primary": ($fond == "Gris") ? "bg-light" : "" ?>">
       <div class="container">
             <!-- Title -->
             <?php if (get_sub_field('title')) : ?>
