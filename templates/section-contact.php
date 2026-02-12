@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * Contact Block
@@ -12,7 +12,7 @@
  */
 ?>
 <?php $fond = get_sub_field('fond'); ?>
-<section class="section section-contact <?php echo $fond == "Couleur" ? "bg-primary" : $fond == "Gris" ? "bg-light" : "" ?>">
+<section class="section section-contact <?php echo $fond == "Couleur" ? "bg-primary" : ($fond == "Gris" ? "bg-light" : "") ?>">
 	<!-- Section background: image -->
 	<?php if (get_sub_field('fond') == "Image") : ?>
 		<div class="section__background-image" style="

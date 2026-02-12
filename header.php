@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * @author      ThatMuch
@@ -14,14 +14,14 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-  />
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 	<?php mars_gtm('head') ?>
 	<!--=== OPEN-GRAPH TAGS ===-->
 	<?php mars_ogtags() ?>
 	<!--=== PRELOAD FONTS ===-->
-	<?php // mars_preload_fonts() ?>
+	<?php // mars_preload_fonts() 
+	?>
 	<!--=== WP HEAD ===-->
 	<?php wp_head(); ?>
 </head>
@@ -35,7 +35,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<div class="container">
 			<a class="navbar-brand" href="<?php echo  site_url(); ?>">
-			<img data-src="<?php echo $image[0] ? $image[0] : get_template_directory_uri()."/assets/images/MarsLogoWhite.webp"; ?>" alt="logo footer">
+				<img data-src="<?php echo $image[0] ? $image[0] : get_template_directory_uri() . "/assets/images/MarsLogoWhite.webp"; ?>" alt="logo footer">
 			</a>
 			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e('Toggle Navigation', 'theme-textdomain'); ?>">
 				<span class="navbar-toggler-icon"></span>
@@ -94,37 +94,37 @@
 		</div>
 	</nav>
 	<?php
-		$bg_default = get_field('default_bg_light', 'option');
+	$bg_default = get_field('default_bg_light', 'option');
 	if (is_page() && !is_front_page() || is_single()) :
 		$background_image = get_the_post_thumbnail_url();
-		?>
-		<header class="page-header <?php echo $background_image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image ? $background_image : $bg_default; ?>)">
+	?>
+		<header class="page-header <?php echo $background_image ? "hasBg" : "default" ?>" style="background-image: url(<?php echo $background_image ? $background_image : $bg_default; ?>)">
 			<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 		</header>
-		<?php elseif (is_home()) :
-			$background_image_home = get_the_post_thumbnail_url(get_option('page_for_posts'));
-			?>
-					<header class="page-header <?php echo $background_image_home ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image_home ? $background_image_home : $bg_default; ?>)">
+	<?php elseif (is_home()) :
+		$background_image_home = get_the_post_thumbnail_url(get_option('page_for_posts'));
+	?>
+		<header class="page-header <?php echo $background_image_home ? "hasBg" : "default" ?>" style="background-image: url(<?php echo $background_image_home ? $background_image_home : $bg_default; ?>)">
 			<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 		</header>
-		<?php elseif (is_archive() || is_category()) :
-			$category = get_queried_object();
-			$image = get_field('image', $category);
-			?>
-			<header class="page-header <?php echo $image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $image ? $image['url'] : $bg_default; ?>">
-				<h1 class="page-title screen-reader-text">
-					<?php
-					if (is_day()) :
-						echo get_the_date();
-					elseif (is_month()) :
-						echo get_the_date(_x('F Y', 'monthly archives date format', 'stanlee'));
-					elseif (is_year()) :
-						echo get_the_date(_x('Y', 'yearly archives date format', 'stanlee'));
-					else :
-						single_cat_title();
-					endif;
-					?>
-				</h1>
-			</header>
+	<?php elseif (is_archive() || is_category()) :
+		$category = get_queried_object();
+		$image = get_field('image', $category);
+	?>
+		<header class="page-header <?php echo $image ? "hasBg" : "default" ?>" style="background-image: url(<?php echo $image ? $image['url'] : $bg_default; ?>">
+			<h1 class="page-title screen-reader-text">
+				<?php
+				if (is_day()) :
+					echo get_the_date();
+				elseif (is_month()) :
+					echo get_the_date(_x('F Y', 'monthly archives date format', 'stanlee'));
+				elseif (is_year()) :
+					echo get_the_date(_x('Y', 'yearly archives date format', 'stanlee'));
+				else :
+					single_cat_title();
+				endif;
+				?>
+			</h1>
+		</header>
 	<?php endif; ?>
 	<div id="content" class="site-content">

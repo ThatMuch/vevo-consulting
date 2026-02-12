@@ -1,4 +1,5 @@
-<?
+<?php
+
 /**
  * Text Block
  * This is a (very basic) default ACF-Block using the "Flexible Element" field-type
@@ -9,28 +10,28 @@
  * @since       mars_1.0.0
  *
  */
- ?>
+?>
 <?php $fond = get_sub_field('fond'); ?>
- <section class="section section-faq <?php echo $fond == "Couleur" ? "bg-primary": $fond == "Gris" ? "bg-light" : "" ?>">
- <div class="container">
+<section class="section section-faq <?php echo $fond == "Couleur" ? "bg-primary" : ($fond == "Gris" ? "bg-light" : "") ?>">
+    <div class="container">
         <!-- Title -->
-        <?php if(get_sub_field('title') ) : ?>
+        <?php if (get_sub_field('title')) : ?>
             <h2 class="section__title primary"><?php echo  get_sub_field('title'); ?></h2>
         <?php endif; ?>
         <!-- Title -->
         <div class="accordion section-faq__accordion" id="faq-accordion">
             <!-- FAQ -->
-            <?php if ( have_rows('faq') ) :  $i =0; ?>
+            <?php if (have_rows('faq')) :  $i = 0; ?>
 
-                <?php while( have_rows('faq') ) : the_row();?>
+                <?php while (have_rows('faq')) : the_row(); ?>
                     <div class="card">
                         <div class="card-header collapsed" id="heading-<?php echo  $i ?>" data-toggle="collapse" data-target="#collapse-<?php echo  $i ?>" aria-expanded="true" aria-controls="collapseOne">
-                        <div class="row">
-                            <div class="col-10 col-md-11"><?php the_sub_field('question'); ?></div>
-                                                        <div class="col-2 col-md-1 d-flex align-items-center">
-                                <span class="card-header-expand"></span>
+                            <div class="row">
+                                <div class="col-10 col-md-11"><?php the_sub_field('question'); ?></div>
+                                <div class="col-2 col-md-1 d-flex align-items-center">
+                                    <span class="card-header-expand"></span>
+                                </div>
                             </div>
-                        </div>
                         </div>
 
                         <div id="collapse-<?php echo  $i ?>" class="collapse" aria-labelledby="heading-<?php echo  $i ?>" data-parent="#faq-accordion">
@@ -40,7 +41,8 @@
                         </div>
                     </div>
 
-                <?php $i++; endwhile; ?>
+                <?php $i++;
+                endwhile; ?>
 
             <?php endif; ?>
 
@@ -48,4 +50,4 @@
 
         </div>
     </div>
- </section>
+</section>
